@@ -1,0 +1,140 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root:
+# /Users/jeongseonghun/Desktop/Workspace/github/OCaml_F1VAE_Interpreter/PA3_template
+# Auto-detected concurrency: 8
+$ /opt/homebrew/bin/ocamlc.opt -config > /var/folders/4z/wspxd4rd5mb9vdbl5019_rtr0000gn/T/dune_3b22de_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; toplevel_path =
+#      Some External "/Users/jeongseonghun/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/opt/homebrew/bin"
+#  ; ocaml = Ok External "/Users/jeongseonghun/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/opt/homebrew/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/opt/homebrew/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/opt/homebrew/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/opt/homebrew/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/jeongseonghun/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/opt/homebrew/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/jeongseonghun/Desktop/Workspace/github/OCaml_F1VAE_Interpreter/PA3_template"
+#        ; "INSIDE_DUNE" :
+#            "/Users/jeongseonghun/Desktop/Workspace/github/OCaml_F1VAE_Interpreter/PA3_template/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/jeongseonghun/Desktop/Workspace/github/OCaml_F1VAE_Interpreter/PA3_template/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/jeongseonghun/Desktop/Workspace/github/OCaml_F1VAE_Interpreter/PA3_template/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/jeongseonghun/Desktop/Workspace/github/OCaml_F1VAE_Interpreter/PA3_template/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/Users/jeongseonghun/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default = "/opt/homebrew/lib/ocaml"
+#      ; standard_library = "/opt/homebrew/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "clang"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "clang"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "clang"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin22.1.0"
+#      ; target = "aarch64-apple-darwin22.1.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /opt/homebrew/bin/ocamldep.opt -modules -impl interpreter.ml) > _build/default/.front.objs/interpreter.impl.d
+$ (cd _build/default && /opt/homebrew/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .front.objs/byte -no-alias-deps -opaque -o .front.objs/byte/interpreter.cmo -c -impl interpreter.ml)
+$ (cd _build/default && /opt/homebrew/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .test.objs/byte -I /Users/jeongseonghun/.opam/default/lib/base -I /Users/jeongseonghun/.opam/default/lib/base/base_internalhash_types -I /Users/jeongseonghun/.opam/default/lib/base/caml -I /Users/jeongseonghun/.opam/default/lib/base/shadow_stdlib -I /Users/jeongseonghun/.opam/default/lib/jane-street-headers -I /Users/jeongseonghun/.opam/default/lib/ppx_compare/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_hash/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/config -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/sexplib0 -I /Users/jeongseonghun/.opam/default/lib/time_now -I .front.objs/byte -no-alias-deps -opaque -o .test.objs/byte/test.cmo -c -impl test.pp.ml)
+$ (cd _build/default && /opt/homebrew/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -bin-annot -I .test.inline-tests/.test.inline-tests.eobjs/byte -I /Users/jeongseonghun/.opam/default/lib/base -I /Users/jeongseonghun/.opam/default/lib/base/base_internalhash_types -I /Users/jeongseonghun/.opam/default/lib/base/caml -I /Users/jeongseonghun/.opam/default/lib/base/shadow_stdlib -I /Users/jeongseonghun/.opam/default/lib/jane-street-headers -I /Users/jeongseonghun/.opam/default/lib/ppx_compare/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_hash/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/config -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runner/lib -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/sexplib0 -I /Users/jeongseonghun/.opam/default/lib/time_now -I .front.objs/byte -I .test.objs/byte -no-alias-deps -o .test.inline-tests/.test.inline-tests.eobjs/byte/dune__exe__Inline_test_runner_test.cmo -c -impl .test.inline-tests/inline_test_runner_test.ml-gen)
+$ (cd _build/default && /opt/homebrew/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .test.objs/byte -I .test.objs/native -I /Users/jeongseonghun/.opam/default/lib/base -I /Users/jeongseonghun/.opam/default/lib/base/base_internalhash_types -I /Users/jeongseonghun/.opam/default/lib/base/caml -I /Users/jeongseonghun/.opam/default/lib/base/shadow_stdlib -I /Users/jeongseonghun/.opam/default/lib/jane-street-headers -I /Users/jeongseonghun/.opam/default/lib/ppx_compare/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_hash/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/config -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/sexplib0 -I /Users/jeongseonghun/.opam/default/lib/time_now -I .front.objs/byte -I .front.objs/native -intf-suffix .ml -no-alias-deps -opaque -o .test.objs/native/test.cmx -c -impl test.pp.ml)
+$ (cd _build/default && /opt/homebrew/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .front.objs/byte -I .front.objs/native -intf-suffix .ml -no-alias-deps -opaque -o .front.objs/native/interpreter.cmx -c -impl interpreter.ml)
+$ (cd _build/default && /opt/homebrew/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o front.cmxa .front.objs/native/value.cmx .front.objs/native/store.cmx .front.objs/native/ast.cmx .front.objs/native/fStore.cmx .front.objs/native/interpreter.cmx)
+$ (cd _build/default && /opt/homebrew/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o test.cmxa .test.objs/native/test.cmx)
+$ (cd _build/default && /opt/homebrew/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -I .test.inline-tests/.test.inline-tests.eobjs/byte -I .test.inline-tests/.test.inline-tests.eobjs/native -I /Users/jeongseonghun/.opam/default/lib/base -I /Users/jeongseonghun/.opam/default/lib/base/base_internalhash_types -I /Users/jeongseonghun/.opam/default/lib/base/caml -I /Users/jeongseonghun/.opam/default/lib/base/shadow_stdlib -I /Users/jeongseonghun/.opam/default/lib/jane-street-headers -I /Users/jeongseonghun/.opam/default/lib/ppx_compare/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_enumerate/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_hash/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/config -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runner/lib -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /Users/jeongseonghun/.opam/default/lib/sexplib0 -I /Users/jeongseonghun/.opam/default/lib/time_now -I .front.objs/byte -I .front.objs/native -I .test.objs/byte -I .test.objs/native -intf-suffix .ml-gen -no-alias-deps -o .test.inline-tests/.test.inline-tests.eobjs/native/dune__exe__Inline_test_runner_test.cmx -c -impl .test.inline-tests/inline_test_runner_test.ml-gen)
+$ (cd _build/default && /opt/homebrew/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -o .test.inline-tests/inline_test_runner_test.exe front.cmxa /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/config/inline_test_config.cmxa /Users/jeongseonghun/.opam/default/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /Users/jeongseonghun/.opam/default/lib/base/base_internalhash_types /Users/jeongseonghun/.opam/default/lib/base/caml/caml.cmxa /Users/jeongseonghun/.opam/default/lib/sexplib0/sexplib0.cmxa /Users/jeongseonghun/.opam/default/lib/base/shadow_stdlib/shadow_stdlib.cmxa /Users/jeongseonghun/.opam/default/lib/base/base.cmxa -I /Users/jeongseonghun/.opam/default/lib/base /Users/jeongseonghun/.opam/default/lib/jane-street-headers/jane_street_headers.cmxa /Users/jeongseonghun/.opam/default/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /Users/jeongseonghun/.opam/default/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /Users/jeongseonghun/.opam/default/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /Users/jeongseonghun/.opam/default/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /Users/jeongseonghun/.opam/default/lib/time_now/time_now.cmxa -I /Users/jeongseonghun/.opam/default/lib/time_now /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa test.cmxa /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runner/lib/ppx_inline_test_runner_lib.cmxa -I /Users/jeongseonghun/.opam/default/lib/ppx_inline_test/runner/lib .test.inline-tests/.test.inline-tests.eobjs/native/dune__exe__Inline_test_runner_test.cmx -linkall)
+$ (cd _build/default && .test.inline-tests/inline_test_runner_test.exe inline-test-runner test -source-tree-root . -diff-cmd - -verbose)
+> File "test.ml", line 6, characters 0-142: <<try let ast = Prog ([], (Add ((Id "x"), (Num [...]>> (0.000 sec)
+> File "test.ml", line 12, characters 0-178: <<try   let ast =     Prog ([FunDef ("x", [], ([...]>> (0.000 sec)
+> File "test.ml", line 18, characters 0-232: <<try   let ast =     Prog       ([FunDef ("x",[...]>> (0.000 sec)
+> File "test.ml", line 24, characters 0-237: <<try   let ast =     Prog       ([FunDef ("x",[...]>> (0.000 sec)
+> File "test.ml", line 30, characters 0-122: <<(interp ast) = (NumV 14)>> (0.000 sec)
+> File "test.ml", line 34, characters 0-130: <<(interp ast) = (NumV 4)>> (0.000 sec)
+> File "test.ml", line 38, characters 0-143: <<(interp ast) = (NumV 7)>> (0.000 sec)
+> File "test.ml", line 42, characters 0-144: <<(interp ast) = (NumV 5)>> (0.000 sec)
+> File "test.ml", line 46, characters 0-195: <<(interp ast) = (NumV 7)>> (0.000 sec)
+> File "test.ml", line 50, characters 0-102: <<(interp ast) = (NumV 53)>> (0.000 sec)
+> File "test.ml", line 54, characters 0-102: <<(interp ast) = (NumV 65)>> (0.000 sec)
+> File "test.ml", line 58, characters 0-102: <<(interp ast) = (NumV 0)>> (0.000 sec)
+> File "test.ml", line 62, characters 0-113: <<(interp ast) = (NumV 8)>> (0.000 sec)
+> File "test.ml", line 66, characters 0-169: <<try   let ast = Prog ([], (LetIn ("x", (Num 5[...]>> (0.000 sec)
+> File "test.ml", line 72, characters 0-186: <<try   let ast =     Prog       ([FunDef ("x",[...]>> (0.000 sec)
